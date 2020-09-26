@@ -100,13 +100,13 @@
      <td width="67%" valign="top">
         <p><a href="pubs/pal.pdf" target="_blank" id="pal">
         <heading>PAL: Pretext-based Active Learning</heading></a><br>
-        Shubhang Bhatnagar, <strong>Sachin Goyal</strong>, Darshan Tank, <a href="https://www.ee.iitb.ac.in/~asethi/" target="_blank"> Amit Sethi </a>, <br>
+        Shubhang Bhatnagar, <strong>Sachin Goyal</strong>, Darshan Tank, <a href="https://www.ee.iitb.ac.in/~asethi/" target="_blank"> Amit Sethi </a> <br>
         Under Review, AAAI 2020<br>
         </p>
 
         <div class="paper" id="pal">
         <a href="javascript:toggleblock('palabs')">abstract</a> /
-        <a href="pubs/pal.pdf" target="_blank">paper</a> /
+        <a href="pubs/pal.pdf" target="_blank">paper</a>
         <br>
 
         <p align="justify"> <i id="palabs">When obtaining labels is expensive, the requirement of a large labeled training data set for deep learning can be mitigated by active learning. Active learning refers to the development of algorithms to judiciously pick limited subsets of unlabeled samples that can be sent for labeling by an oracle. We propose an intuitive active learning technique that, in addition to the task neural network (e.g., for classification), uses an auxiliary self-supervised neural network that assesses the utility of an unlabeled sample for inclusion in the labeled set. Our core idea is that the difficulty of the auxiliary network trained on labeled samples to solve a self-supervision task on an unlabeled sample represents the utility of obtaining the label of that unlabeled sample. Specifically, we assume that an unlabeled image on which the precision of predicting a random applied geometric transform is low must be out of the distribution represented by the current set of labeled images. These images will therefore maximize the relative information gain when labeled by the oracle. We also demonstrate that augmenting the auxiliary network with task specific training further improves the results. We demonstrate strong performance on a range of widely used datasets and establish a new state of the art for active learning. We also make our code publicly available to encourage further research.</i></p>
