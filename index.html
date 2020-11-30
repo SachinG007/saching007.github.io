@@ -100,16 +100,16 @@
      <td width="67%" valign="top">
         <p><a href="pubs/pal.pdf" target="_blank" id="pal">
         <heading>PAL: Pretext-based Active Learning</heading></a><br>
-        Shubhang Bhatnagar, <strong>Sachin Goyal</strong>, Darshan Tank, <a href="https://www.ee.iitb.ac.in/~asethi/" target="_blank"> Amit Sethi </a> <br>
-        Under Review, AAAI 2021<br>
+        Shubhang Bhatnagar, <strong>Sachin Goyal</strong>*, Darshan Tank*, <a href="https://www.ee.iitb.ac.in/~asethi/" target="_blank"> Amit Sethi </a> <br>
+        Under Review, CVPR 2021<br>
         </p>
 
         <div class="paper" id="pal">
         <a href="javascript:toggleblock('palabs')">abstract</a> /
-        <a href="pubs/pal.pdf" target="_blank">paper</a>
+        <a href="https://arxiv.org/pdf/2010.15947.pdf" target="_blank">paper</a>
         <br>
 
-        <p align="justify"> <i id="palabs">When obtaining labels is expensive, the requirement of a large labeled training data set for deep learning can be mitigated by active learning. Active learning refers to the development of algorithms to judiciously pick limited subsets of unlabeled samples that can be sent for labeling by an oracle. We propose an intuitive active learning technique that, in addition to the task neural network (e.g., for classification), uses an auxiliary self-supervised neural network that assesses the utility of an unlabeled sample for inclusion in the labeled set. Our core idea is that the difficulty of the auxiliary network trained on labeled samples to solve a self-supervision task on an unlabeled sample represents the utility of obtaining the label of that unlabeled sample. Specifically, we assume that an unlabeled image on which the precision of predicting a random applied geometric transform is low must be out of the distribution represented by the current set of labeled images. These images will therefore maximize the relative information gain when labeled by the oracle. We also demonstrate that augmenting the auxiliary network with task specific training further improves the results. We demonstrate strong performance on a range of widely used datasets and establish a new state of the art for active learning. We also make our code publicly available to encourage further research.</i></p>
+        <p align="justify"> <i id="palabs">The goal of active learning algorithms is to judiciously select subsets of unlabeled samples to be labeled by an oracle, in order to reduce the time and cost associated with supervised learning. Previously, active learning techniques for deep neural networks have used the same network for the task at hand (e.g., classification) as well as sample selection,  which  can  be  conflicting  goals.   To  address  this issue,  we  use  a  separate  sample  scoring  network  to  capture the relevant information about the distribution of the labeled samples,  and use it to assess the novelty of unlabeled samples.  Specifically, we propose to efficiently train the scoring network using a self-supervised learning (pre-text)  task  on  the  labeled  samples.    To  make  the  scoring network more robust, we added to it another head, which is trained using the supervised (task) objective itself.  The scoring network was paired with a scoring function that allows an appropriate trade-off between the two heads.  We also ensure that the selected samples are diverse by selectively fine-tuning the scoring network in sub-rounds of each query round.  The resulting scheme performs competitively with the state-of-the-art on benchmark datasets.  More importantly, in realistic scenarios when some labels are erroneous and new classes are introduced on the fly, the performance of the proposed method remains strong.</i></p>
 
   </tr>
 </table>
