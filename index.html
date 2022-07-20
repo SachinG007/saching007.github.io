@@ -115,8 +115,29 @@
 </table> -->
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td id="ConfPublications"> <sectionheading>&nbsp;&nbsp;Conference Publications</sectionheading></td></tr>
+  <tr><td id="ConfPublications"> <sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+     <td width="33%" valign="top" align="center"><a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank"><img src="images/met.PNG" alt="MET" width="100%" style="border-radius:15px"></a>
+     <td width="67%" valign="top">
+        <p><a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank" id="pal">
+        <heading>MET: Masked Encoding for Tabular Data</heading></a><br>
+        Kushal Majmundar, <strong>Sachin Goyal</strong>, <a href="https://praneethnetrapalli.org/" target="_blank"> Praneeth Netrapalli </a>, <a href="https://www.prateekjain.org/" target="_blank"> Prateek Jain </a> <br>
+        Under Review<br>
+        </p>
+
+        <div class="paper" id="pal">
+        <a href="javascript:toggleblock('palabs')">abstract</a> /
+        <a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank">paper</a>
+        <br>
+
+        <p align="justify"> <i id="palabs">The goal of pool-based active learning is to judiciously select a fixed-sized subset of unlabeled samples from a pool to query an oracle for their labels, in order to maximize the accuracy of a supervised learner. However, the unsaid requirement that the oracle should always assign correct labels is unreasonable for most situations. We propose an active learning technique for deep neural networks that is more robust to mislabeling than the previously proposed techniques. Previous techniques rely on the task network itself to estimate the novelty of the unlabeled samples, but learning the task (generalization) and selecting samples (out-of-distribution detection) can be conflicting goals. We use a separate network to score the unlabeled samples for selection. The scoring network relies on self-supervision for modeling the distribution of the labeled samples to reduce the dependency on potentially noisy labels. To counter the paucity of data, we also deploy another head on the scoring network for regularization via multi-task learning and use an unusual self-balancing hybrid scoring function. Furthermore, we divide each query into sub-queries before labeling to ensure that the query has diverse samples. In addition to having a higher tolerance to mislabeling of samples by the oracle, the resultant technique also produces competitive accuracy in the absence of label noise. The technique also handles the introduction of new classes on-the-fly well by temporarily increasing the sampling rate of these classes.</i></p>
+
+  </tr>
+</table>
+
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tr>
