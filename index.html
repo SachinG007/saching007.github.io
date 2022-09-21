@@ -115,6 +115,30 @@
 </table> -->
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td id="Preprints"> <sectionheading>&nbsp;&nbsp;Preprints</sectionheading></td></tr>
+</table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+<tr>
+  <td width="33%" valign="top" align="center"><a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank"><img src="images/met.png" alt="MET" width="100%" style="border-radius:15px"></a>
+  <td width="67%" valign="top">
+     <p><a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank" id="met">
+     <heading>MET : Masked Encoding for Tabular Data</heading></a><br>
+     Kushal Majmundar, <strong>Sachin Goyal</strong>, <a href="https://praneethnetrapalli.org/" target="_blank"> Praneeth Netrapalli </a>, <a href="https://www.prateekjain.org/" target="_blank"> Prateek Jain </a> <br>
+     Under Review<br>
+     </p>
+
+     <div class="paper" id="met">
+     <a href="javascript:toggleblock('metabs')">abstract</a> /
+     <a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank">paper</a>
+     <br>
+
+     <p align="justify"> <i id="metabs">We consider the task of self-supervised representation learning (SSL) for tabular data: tabular-SSL. Typical contrastive learning based SSL methods require instance-wise data augmentations which are difficult to design for unstructured tabular data. Existing tabular-SSL methods design such augmentations in a relatively ad-hoc fashion and can fail to capture the underlying data manifold. Instead of augmentations based approaches for tabular-SSL, we propose a new reconstruction based method, called Masked Encoding for Tabular Data (MET), that does not require augmentations. MET is based on the popular MAE approach for vision-SSL [He et al., 2021] and uses two key ideas: (i) since each coordinate in a tabular dataset has a distinct meaning, we need to use separate representations for all coordinates, and (ii) using an adversarial reconstruction loss in addition to the standard one. Empirical results on five diverse tabular datasets show that MET achieves a new state of the art (SOTA) on all of these datasets and improves up to 9% over current SOTA methods. We shed more light on the working of MET via experiments on carefully designed simple datasets.</i></p>
+
+</tr>
+</table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
   <tr><td id="ConfPublications"> <sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
 </table>
 
@@ -125,7 +149,7 @@
        <p><a href="https://arxiv.org/pdf/2207.09640.pdf" target="_blank" id="conj">
        <heading>Test-Time Adaptation via Conjugate Pseudo-labels</heading></a><br>
        <strong>Sachin Goyal<sup>*</sup></strong>, Mingjie Sun<sup>*</sup>, <a href="https://www.cs.cmu.edu/~aditirag/" target="_blank"> Aditi Raghunathan </a>, <a href="https://zicokolter.com/" target="_blank"> Zico Kolter </a> <br>
-       Under Review<br>
+       Neural Information Processing Systems (<strong>NeurIPS</strong>) 2022.<br>
        </p>
 
        <div class="paper" id="conj">
@@ -138,30 +162,12 @@
   </tr>
 
   <tr>
-     <td width="33%" valign="top" align="center"><a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank"><img src="images/met.png" alt="MET" width="100%" style="border-radius:15px"></a>
-     <td width="67%" valign="top">
-        <p><a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank" id="met">
-        <heading>MET : Masked Encoding for Tabular Data</heading></a><br>
-        Kushal Majmundar, <strong>Sachin Goyal</strong>, <a href="https://praneethnetrapalli.org/" target="_blank"> Praneeth Netrapalli </a>, <a href="https://www.prateekjain.org/" target="_blank"> Prateek Jain </a> <br>
-        Under Review<br>
-        </p>
-
-        <div class="paper" id="met">
-        <a href="javascript:toggleblock('metabs')">abstract</a> /
-        <a href="https://arxiv.org/pdf/2206.08564.pdf" target="_blank">paper</a>
-        <br>
-
-        <p align="justify"> <i id="metabs">We consider the task of self-supervised representation learning (SSL) for tabular data: tabular-SSL. Typical contrastive learning based SSL methods require instance-wise data augmentations which are difficult to design for unstructured tabular data. Existing tabular-SSL methods design such augmentations in a relatively ad-hoc fashion and can fail to capture the underlying data manifold. Instead of augmentations based approaches for tabular-SSL, we propose a new reconstruction based method, called Masked Encoding for Tabular Data (MET), that does not require augmentations. MET is based on the popular MAE approach for vision-SSL [He et al., 2021] and uses two key ideas: (i) since each coordinate in a tabular dataset has a distinct meaning, we need to use separate representations for all coordinates, and (ii) using an adversarial reconstruction loss in addition to the standard one. Empirical results on five diverse tabular datasets show that MET achieves a new state of the art (SOTA) on all of these datasets and improves up to 9% over current SOTA methods. We shed more light on the working of MET via experiments on carefully designed simple datasets.</i></p>
-
-  </tr>
-
-  <tr>
      <td width="33%" valign="top" align="center"><a href="pubs/pal.pdf" target="_blank"><img src="images/pal.PNG" alt="PAL" width="100%" style="border-radius:15px"></a>
      <td width="67%" valign="top">
         <p><a href="pubs/pal.pdf" target="_blank" id="pal">
         <heading>PAL: Pretext-based Active Learning</heading></a><br>
         Shubhang Bhatnagar, <strong>Sachin Goyal</strong>, Darshan Tank, <a href="https://www.ee.iitb.ac.in/~asethi/" target="_blank"> Amit Sethi </a> <br>
-        British Machine Vision Conference (BMVC), 2021<br>
+        British Machine Vision Conference (<strong>BMVC</strong>), 2021<br>
         </p>
 
         <div class="paper" id="pal">
@@ -179,7 +185,7 @@
         <p><a href="pubs/drocc.pdf" target="_blank" id="drocc">
         <heading>DROCC: Deep Robust One-Class Classification</heading></a><br>
         <strong>Sachin Goyal</strong>, <a href="https://stanford.edu/~aditir/" target="_blank"> Aditi Raghunathan</a>, Moksh Jain, <a href="http://harsha-simhadri.org/" target="_blank"> Harsha Vardhan Simhadri </a>, <a href="https://www.prateekjain.org/" target="_blank"> Prateek Jain </a> <br>
-        International Conference on Machine Learning (ICML), 2020<br>
+        International Conference on Machine Learning (<strong>ICML</strong>), 2020<br>
         </p>
 
         <div class="paper" id="drocc">
