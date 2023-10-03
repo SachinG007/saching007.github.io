@@ -99,14 +99,14 @@
               <p> Hello All !! Welcome to my tiny corner on the web. </p>
               <p> I am a third year PhD student in the Machine Learning Department (MLD) at CMU, where I am advised by
                 <a href="https://zicokolter.com/" target="_blank"> Prof. Zico Kolter </a>. My current research focus
-                includes domain adaptation and robust fine-tuning.
+                includes robust training and finetuning of foundation models.
               </p>
               <p> Prior to CMU, I was a Research Fellow at Microsoft Research, India advised by <a
                   href="https://www.prateekjain.org/" target="_blank"> Prateek Jain </a> and <a
                   href="http://harsha-simhadri.org/" target="_blank"> Harsha Vardhan Simhadri </a>. I worked on <a
                   href="https://github.com/microsoft/EdgeML" target="_blank">EdgeML</a>, developing ML algorithms for
                 severely resource constrained devices. </p>
-              <p> E arlier, I spent 4 amazing years at IIT Bombay, earning a Bachelor's in EE (CGPA 9.11) with a Minor in
+              <p> Earlier, I spent 4 amazing years at IIT Bombay, earning a Bachelor's in EE (CGPA 9.11) with a Minor in
                 CS. I was advised by <a href="https://www.ee.iitb.ac.in/~sc/" target="_blank"> Subhasis Chaudhuri </a>
                 for my bachleor's thesis.</p>
 
@@ -126,6 +126,49 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
           <tr>
+            <td width="33%" valign="top" align="center"><a href="https://saching007.github.io/" target="_blank"><img
+                  src="images/pauseft.png" alt="PauseLLM" width="100%" style="border-radius:15px"></a>
+            <td width="67%" valign="top">
+              <p><a href="https://saching007.github.io/" target="_blank" id="pausellm">
+                  <heading>Think before you speak: Training Language ModelsWith Pause Tokens
+                  </heading>
+                </a><br>
+                <strong>Sachin Goyal</strong><sup>*</sup>, <a href="https://jiziwei.github.io/" target="_blank"> Ziwei
+                  Ji </a>, <a href="https://ankitsrawat.github.io/home/" target="_blank"> Ankit Singh Rawat</a>, <a
+                  href="https://akmenon.github.io/" target="_blank"> Aditya Krishna Menon</a>, <a
+                  href="https://scholar.google.com/citations?user=08CNqrYAAAAJ&hl=en" target="_blank"> Sanjiv Kumar</a>,
+                <a href="https://vaishnavh.github.io/home/index.html" target="_blank"> Vaishnavh Nagarajan </a> <br>
+              </p>
+
+              <div class="paper" id="pausellm">
+                <a href="javascript:toggleblock('pausellmabs')">abstract</a> /
+                <a href="https://saching007.github.io/" target="_blank">paper</a> /
+                <br>
+
+                <p align="justify"> <i id="pausellmabs">Language models generate responses by producing a series of
+                    tokens in immediate
+                    succession: the (K +1)th token is an outcome of manipulating K hidden vectors
+                    per layer, one vector per preceding token. What if instead we were to let the model
+                    manipulate say, K+10 hidden vectors, before it outputs the (K+1)th token? We
+                    operationalize this idea by performing training and inference on language models
+                    with a (learnable) pause token, a sequence of which is appended to the input
+                    prefix. We then delay extracting the model's outputs until the last pause token is
+                    seen, thereby allowing the model to process extra computation before committing
+                    to an answer. We empirically evaluate pause-training on decoder-only models
+                    of 1B and 130M parameters with causal pretraining on C4, and on downstream
+                    tasks covering reasoning, question-answering, general understanding and fact recall.
+                    Our main finding is that inference-time delays show gains on our tasks when
+                    the model is both pre-trained and finetuned with delays. For the 1B model, we
+                    witness gains on eight tasks, most prominently, a gain of 18% EM score on the
+                    QA task of SQuAD, 8% on CommonSenseQA and 1% accuracy on the reasoning
+                    task of GSM8k. Our work raises a range of conceptual and practical future
+                    research questions on making delayed next-token prediction a widely applicable
+                    new paradigm.</i>
+                </p>
+
+          </tr>
+
+          <tr>
             <td width="33%" valign="top" align="center"><a href="https://arxiv.org/abs/2307.03132" target="_blank"><img
                   src="images/tmars.png" alt="TMARS" width="100%" style="border-radius:15px"></a>
             <td width="67%" valign="top">
@@ -138,6 +181,7 @@
                   Lipton</a>, <a href="https://zicokolter.com/" target="_blank"> Zico Kolter</a>, <a
                   href="https://www.cs.cmu.edu/~aditirag/" target="_blank"> Aditi
                   Raghunathan </a> <br>
+                Datacomp Workshop @ <strong>ICCV</strong> 2023 <span style="color:darkgreen;">(oral)</span><br>
                 Data Centric Machine Learning Workshop @ <strong>ICML</strong> 2023<br>
               </p>
 
@@ -655,6 +699,9 @@
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('palabs');
+  </script>
+  <script xml:space="preserve" language="JavaScript">
+    hideblock('pausellmabs');
   </script>
   <script xml:space="preserve" language="JavaScript">
     hideblock('metabs');
