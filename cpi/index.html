@@ -127,7 +127,7 @@
               <div class="row">
                 <div class="col" style="text-align: center">
                   <!-- add center align the image -->
-                  <img src="./resources/cpi.png" width="70%" style="border-radius:10px;"></img>
+                  <img src="./resources/cpi.png" width="50%" style="border-radius:10px;"></img>
                 </div>
               </div>
               <p>
@@ -156,9 +156,8 @@
               </div>
               <p>
               <ol>
-                <li>Through controlled studies, we show that the decrease in context reliance as instruction tuning
-                  progresses,
-                  is not due to memorization of facts similar to eval dataset. </li>
+                <li>This decrease in context reliance with finetuning, is not due to memorization of relevant facts with
+                  the progress of instruction finetuning.</li>
                 <li>
                   Model learns to rely on parametric knowledge broadly well outside the exact facts seen during
                   finetuning.
@@ -167,7 +166,7 @@
                   tuning
                   dataset.</li>
                 </li>
-                <li>We show that even when finetuning only on a context-only subset of Alpaca, there is a drop in
+                <li>We show that even when finetuning only on a <b>context-only subset of Alpaca</b>, there is a drop in
                   context
                   reliance.</li>
               </ol>
@@ -187,71 +186,50 @@
               <p>
               <ol>
                 <li><b>Context-Critical Datapoints</b>: Provide key information needed to answer user query.</li>
-                <li><b>Non-Context Critical Datapoints</b>: We inpaint the pixels where text is detected.</li>
-                <li><b>Parametric Datapoints</b>: Finally, we retain only those images whose corresponding masked
-                  images have a high CLIP similarity score with the original caption i.e. have visual features
-                  correlated with the caption.</li>
+                <li><b>Non-Context Critical Datapoints</b>: Context overlaps with model's knowledge from pretraining.
+                </li>
+                <li><b>Parametric Datapoints</b>: General fact recall datapoints.</li>
+              </ol>
+              Both <b>empirically and theoretically</b>, we show that the drop in context reliance is due to the
+              presence of
+              these non-context critical datapoints. <i>In the early stages of training</i>, context-critical points
+              have a high loss, and drive the attention towards the context. <i>In the later stages</i>, the model
+              leverages its pretrained knowledge to further reduce the loss on these non-context-critical points,
+              shifting the attention away from the context.
+              </p>
+
+
+              <hr color="gray" size="3">
+
+              <br>
+              <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Can Counterfactual Data
+                Augmentation Fix Everything</h2>
+              <div class="row">
+                <div class="col" style="text-align: center">
+                  <!-- add center align the image -->
+                  <img src="./resources/mitigation.png" width="70%" style="border-radius:10px;"></img>
+                </div>
+              </div>
+              <p>
+                Our theoretical analysis naturally leads us to some potential mitigation strategies beyond filtering
+                non-context critical datapoints. These strategies give some limited but insightful results.
+              <ol>
+                <li>Counterfactual data augmentation improves context reliance <i>only</i> on tasks similar in type to
+                  the augmented data. </li>
+                <li> For example, adding entity substituted QA counterfactual data improves performance on QA tasks
+                  only and doesn't generalize to other kind of context-parametric conflicts.</li>
+                <li><b>QK Finetuning</b>Regularizing finetuning by updating only the "Query" and "Key" matrices improves
+                  context reliance on certain tasks.</li>
               </ol>
               </p>
 
 
 
-              <div class="columns is-centered has-text-centered">
-                <div class="column is-full-width">
-                  <hr color="gray" size="3">
-
-                  <br>
-
-                  <h2 class="title is-2">Results</h2>
-                  <h3 class="subtitle is-3">Logarithmic Scaling Trends</h3>
-                  <div class="content has-text-justified">
-                    <p>
-                      On various data pool sizes from 2M to 64M shows that the accuracy gains enjoyed by T-MARS
-                      linearly increase as data and compute are scaled exponentially.
-                    </p>
-                  </div>
-                  <div class="col">
-                    <img src="./resources/imnet_zs_vit.png" width="70%" style="border-radius:10px; "></img>
-                  </div>
-                  <h3 class="subtitle is-3">State-of-Art on Datacomp</h3>
-                  <div class="content has-text-justified">
-                    <p>
-                      T-MARS outperforms the top-ranked
-                      method on the “medium scale” of DataComp (a data filtering benchmark) by a
-                      margin of 6.5% on ImageNet and 4.7% on VTAB.
-                    </p>
-                  </div>
-                  <div class="col" style="text-align: center">
-                    <img src="./resources/datacomp.png" width="100%" style="border-radius:10px; "></img>
-                    <!-- Add table caption in small font add a padding of 10px from left-->
-                    <p style="font-size: 0.6em; text-align: left;padding-left: 1%;""  >Zero-shot accuracies for various filtering strategies on the small and medium pools of
-            the DataComp benchmark. ∩ denotes the intersection between two filtering strategies. T-MARS
-            outperforms the state-of-art on DataComp by a margin of 5% on the medium scale (ImageNet).</p>
         </div>
-
-        <h3 class=" subtitle is-3">The Marginal Utility of Different Data Types</h3>
-                    <div class="content has-text-justified">
-                      <p>
-                        We investigate the utility of various data types in LAION. Images with text as the only
-                        predictive feature hurt the model as much as adding mislabeled examples to the dataset!! Images
-                        with both visual & text features are as useful as those with no text & should not be removed!
-                      </p>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <img src="./resources/utility_neg.png" width="100%" style="border-radius:10px; "></img>
-                      </div>
-                      <div class="col">
-                        <img src="./resources/utility_pos.png" width="100%" style="border-radius:10px; "></img>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-            </td>
-          </tr>
-        </div>
+        </td>
+        </tr>
       </div>
+    </div>
     </div>
   </section>
 
