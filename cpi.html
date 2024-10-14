@@ -42,14 +42,13 @@
       <h2>Why does Context-Parametric Inversion Happen?</h2>
       <img src="images/cpi.png" alt="CPI">
       <ol>
-        <li>LLM's are instruction finetuned to improve their ability to follow the user instruction and input context.
+        <li>One posible reason is that there are not enough context based answering datapoints in instruction tuning
+          dataset.</li>
         </li>
-        <li>State-of-the-art models still struggle to rely on the context, when it is not aligned
-          with parametric knowledge.</li>
-        <li>We observe an <i>intriguing</i> phenomenon: contrary to the expectation, context reliance infact
-          decreases with instruction finetuning, despite an initial expected increase. </li>
-        <li> We call this as the Context-Parametric Inversion, and tie it to the properties of instruction finetuning
-          data.</li>
+        <li>We show that even when finetuning only on a context-only subset of Alpaca, there is a drop in context
+          reliance. This is because not all contexts provide critical information.</li>
+        <li><b>Context-critical datapoints: </b>Context provides key information needed to answer a query, which the
+          model doesn't know beforehand. </li>
       </ol>
     </section>
   </main>

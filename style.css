@@ -84,10 +84,17 @@ main {
     text-align: left;
 }
 
-.goal img {
+/* .goal img {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+} */
+
+.goal img {
+    width: 400px;
+    /* Set a fixed width in pixels */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 .goal ul {
