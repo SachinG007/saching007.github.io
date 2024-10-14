@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <link rel="icon" href="./resources/mars.png" type="image/png">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM130PWZB5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BM130PWZB5');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="T-MARS : Improving Visual Representations by Circumventing Text Feature Learning">
+  <meta name="keywords" content="CLIP, Data Filtering, Multimodal, Datacomp, Vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T-MARS: Improving Visual Representations by Circumventing Text Feature Learning</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./favicon.ico?">
+
+</head>
+
+<body>
+
+  <section class="hero" style="background-color: #B22234;">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title" style="color: white;">
+              <h1>Context-Parametric Inversion: Why Instruction Finetuning May Not Actually Improve Context Reliance
+              </h1>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block" style="color: white;">
+                <a target="_blank" href="https://saching007.github.io/" style="color:blanchedalmond !important;">Sachin
+                  Goyal</a><sup>*</sup>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://acmilab.org/" style="color:blanchedalmond !important;">Christina
+                  Baek</a>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://zicokolter.com/" style="color:blanchedalmond !important;">Zico
+                  Kolter</a>&nbsp;&nbsp;&nbsp;
+                <a target="_blank" href="https://www.cs.cmu.edu/~aditirag/"
+                  style="color:blanchedalmond !important;">Aditi Raghunathan</a<sup>1</sup>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- arXiV Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://arxiv.org/abs/2307.03132"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- GitHub Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://github.com/locuslab/t-mars"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a target="_blank" href="https://twitter.com/goyalsachin007/status/1677314439236681730?s=20"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>Summary</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-two-thirds">
+          <!-- <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">TLDR</h2> -->
+          <!-- <tr>
+            <td>
+              <h2 class="subtitle">
+                We propose an algorithm to filter web datasets used for training CLIP in order to learn better visual
+                representations, and achieve state-of-art zeroshot accuracy on vision tasks.
+              </h2>
+            </td>
+          </tr> -->
+          <tr>
+            <td>
+              <hr color="gray" size="3">
+              <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">TLDR</h2>
+              <div class="row">
+                <div class="col" style="text-align: center">
+                  <!-- add center align the image -->
+                  <img src="./resources/cpi.png" width="70%" style="border-radius:10px;"></img>
+                </div>
+              </div>
+              <p>
+              <ol>
+                <li>LLM's are instruction finetuned to improve their ability to follow the user instruction and input
+                  context.
+                </li>
+                <li>State-of-the-art models still struggle to rely on the context, when it is not aligned
+                  with parametric knowledge.</li>
+                <li>We observe an <i>intriguing</i> phenomenon: contrary to the expectation, context reliance infact
+                  decreases with instruction finetuning, despite an initial expected increase. </li>
+                <li> We call this as the Context-Parametric Inversion, and tie it to the properties of instruction
+                  finetuning
+                  data.</li>
+              </ol>
+              </p>
+              <hr color="gray" size="3">
+              <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">What Causes Context-Parametric
+                Inversion</h2>
+              <br>
+              <div class="row">
+                <div class="col" style="text-align: center">
+                  <img src="./resources/alpaca_filter.png"
+                    style="border: 0px solid #bbb; border-radius: 10px; width: 100%;"></img></a>
+                </div>
+              </div>
+              <p>
+              <ol>
+                <li>Through controlled studies, we show that the decrease in context reliance as instruction tuning
+                  progresses,
+                  is not due to memorization of facts similar to eval dataset. </li>
+                <li>
+                  Model learns to rely on parametric knowledge broadly well outside the exact facts seen during
+                  finetuning.
+                </li>
+                <li>One posible reason is that there are not enough context based answering datapoints in instruction
+                  tuning
+                  dataset.</li>
+                </li>
+                <li>We show that even when finetuning only on a context-only subset of Alpaca, there is a drop in
+                  context
+                  reliance.</li>
+              </ol>
+              </p>
+
+              <hr color="gray" size="3">
+
+              <br>
+              <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">A look at the Instruction
+                Finetuning Datasets</h2>
+              <div class="row">
+                <div class="col" style="text-align: center">
+                  <!-- add center align the image -->
+                  <img src="./resources/data_categories.png" width="70%" style="border-radius:10px;"></img>
+                </div>
+              </div>
+              <p>
+              <ol>
+                <li><b>Context-Critical Datapoints</b>: Provide key information needed to answer user query.</li>
+                <li><b>Non-Context Critical Datapoints</b>: We inpaint the pixels where text is detected.</li>
+                <li><b>Parametric Datapoints</b>: Finally, we retain only those images whose corresponding masked
+                  images have a high CLIP similarity score with the original caption i.e. have visual features
+                  correlated with the caption.</li>
+              </ol>
+              </p>
+
+
+
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-full-width">
+                  <hr color="gray" size="3">
+
+                  <br>
+
+                  <h2 class="title is-2">Results</h2>
+                  <h3 class="subtitle is-3">Logarithmic Scaling Trends</h3>
+                  <div class="content has-text-justified">
+                    <p>
+                      On various data pool sizes from 2M to 64M shows that the accuracy gains enjoyed by T-MARS
+                      linearly increase as data and compute are scaled exponentially.
+                    </p>
+                  </div>
+                  <div class="col">
+                    <img src="./resources/imnet_zs_vit.png" width="70%" style="border-radius:10px; "></img>
+                  </div>
+                  <h3 class="subtitle is-3">State-of-Art on Datacomp</h3>
+                  <div class="content has-text-justified">
+                    <p>
+                      T-MARS outperforms the top-ranked
+                      method on the “medium scale” of DataComp (a data filtering benchmark) by a
+                      margin of 6.5% on ImageNet and 4.7% on VTAB.
+                    </p>
+                  </div>
+                  <div class="col" style="text-align: center">
+                    <img src="./resources/datacomp.png" width="100%" style="border-radius:10px; "></img>
+                    <!-- Add table caption in small font add a padding of 10px from left-->
+                    <p style="font-size: 0.6em; text-align: left;padding-left: 1%;""  >Zero-shot accuracies for various filtering strategies on the small and medium pools of
+            the DataComp benchmark. ∩ denotes the intersection between two filtering strategies. T-MARS
+            outperforms the state-of-art on DataComp by a margin of 5% on the medium scale (ImageNet).</p>
+        </div>
+
+        <h3 class=" subtitle is-3">The Marginal Utility of Different Data Types</h3>
+                    <div class="content has-text-justified">
+                      <p>
+                        We investigate the utility of various data types in LAION. Images with text as the only
+                        predictive feature hurt the model as much as adding mislabeled examples to the dataset!! Images
+                        with both visual & text features are as useful as those with no text & should not be removed!
+                      </p>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <img src="./resources/utility_neg.png" width="100%" style="border-radius:10px; "></img>
+                      </div>
+                      <div class="col">
+                        <img src="./resources/utility_pos.png" width="100%" style="border-radius:10px; "></img>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <br>
+  <br>
+  <!-- Insert a footer now in CMU red colour -->
+  <footer class="footer" style="background-color: #B22234;">
+    <div class="content has-text-centered">
+      <p style="color: white;">
+        <bold>CMU</bold> &copy; 2023. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

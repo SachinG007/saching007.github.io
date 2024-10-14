@@ -42,6 +42,11 @@
       <h2>Why does Context-Parametric Inversion Happen?</h2>
       <img src="images/cpi.png" alt="CPI">
       <ol>
+        <li>Through controlled studies, we show that the decrease in context reliance as instruction tuning progresses,
+          is not due to memorization of facts similar to eval dataset. </li>
+        <li>
+          Model learns to rely on parametric knowledge broadly well outside the exact facts seen during finetuning
+        </li>
         <li>One posible reason is that there are not enough context based answering datapoints in instruction tuning
           dataset.</li>
         </li>
@@ -49,6 +54,7 @@
           reliance. This is because not all contexts provide critical information.</li>
         <li><b>Context-critical datapoints: </b>Context provides key information needed to answer a query, which the
           model doesn't know beforehand. </li>
+        <li><b>Non-context-critica datapoints: </b>Context overlaps with model's knowledge from pretraining.
       </ol>
     </section>
   </main>
