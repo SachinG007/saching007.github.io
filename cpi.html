@@ -23,23 +23,34 @@
   </header>
 
   <main>
-    <!-- <section class="tldr">
-      <h2>TLDR</h2>
-      <p>We propose an algorithm to filter web datasets used for training CLIP in order to learn better visual
-        representations, and achieve state-of-art zero-shot accuracy on vision tasks.</p>
-    </section> -->
-
     <section class="goal">
       <h2>TLDR</h2>
       <img src="images/cpi.png" alt="CPI">
-      <ul>
-        <li>LLM's are almost always instruction finetuned to improve their ability to follow the user instruction and
-          better comprehend the input context.</li>
-        <li>However, state-of-the-art models still struggle to rely on the context, especially when it is not aligned
+      <ol>
+        <li>LLM's are instruction finetuned to improve their ability to follow the user instruction and input context.
+        </li>
+        <li>State-of-the-art models still struggle to rely on the context, when it is not aligned
           with parametric knowledge.</li>
         <li>We observe an <i>intriguing</i> phenomenon: contrary to the expectation, context reliance infact
           decreases with instruction finetuning, despite an initial expected increase. </li>
-      </ul>
+        <li> We call this as the Context-Parametric Inversion, and tie it to the properties of instruction finetuning
+          data.</li>
+      </ol>
+    </section>
+
+    <section class="goal">
+      <h2>Why does Context-Parametric Inversion Happen?</h2>
+      <img src="images/cpi.png" alt="CPI">
+      <ol>
+        <li>LLM's are instruction finetuned to improve their ability to follow the user instruction and input context.
+        </li>
+        <li>State-of-the-art models still struggle to rely on the context, when it is not aligned
+          with parametric knowledge.</li>
+        <li>We observe an <i>intriguing</i> phenomenon: contrary to the expectation, context reliance infact
+          decreases with instruction finetuning, despite an initial expected increase. </li>
+        <li> We call this as the Context-Parametric Inversion, and tie it to the properties of instruction finetuning
+          data.</li>
+      </ol>
     </section>
   </main>
 
