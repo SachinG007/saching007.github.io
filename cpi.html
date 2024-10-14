@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-MARS: Improving Visual Representations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>T-MARS : Improving Visual Representations by Circumventing Text Feature Learning</h1>
+    <h3>Pratyush Nair<sup>1</sup>, Sachin Goyal<sup>1</sup>, Zachary Lipton<sup>1</sup>, Zico Kolter<sup>1,2</sup>,
+      Aditi Raghunathan<sup>1</sup></h3>
+    <p><sup>1</sup>Carnegie Mellon University, <sup>2</sup>Bosch Center for AI</p>
+    <div class="buttons">
+      <a href="#">arXiv</a>
+      <a href="#">GitHub</a>
+      <a href="#">Summary</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="tldr">
+      <h2>TLDR</h2>
+      <p>We propose an algorithm to filter web datasets used for training CLIP in order to learn better visual
+        representations, and achieve state-of-art zero-shot accuracy on vision tasks.</p>
+    </section>
+
+    <section class="goal">
+      <h2>Goal</h2>
+      <img src="goal-diagram.png" alt="Goal Diagram">
+      <ul>
+        <li>Vision language models like CLIP are trained on web-crawled image caption pairs.</li>
+        <li>We aim to filter these web-datasets for better visual representation learning and improve zero-shot
+          performance.</li>
+        <li>Filtering out bad samples will allow allocating computation resources to useful datapoints.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+
+</html>
