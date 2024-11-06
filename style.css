@@ -92,8 +92,9 @@ main {
 
 .goal img {
     width: 400px;
+    aspect-ratio: 4 / 3;
     /* Set a fixed width in pixels */
-    height: 300px;
+    height: auto;
     /* Maintain aspect ratio */
 }
 
